@@ -1,0 +1,259 @@
+[2020-07-02T11:56:26+08:00][sql] CONNECT:[ UseTime:0.011001s ] mysql:host=127.0.0.1;port=3306;dbname=tpshop6.777777;charset=utf8
+[2020-07-02T11:56:26+08:00][sql] SHOW FULL COLUMNS FROM `tp_config` [ RunTime:0.000000s ]
+[2020-07-02T11:56:26+08:00][sql] SELECT * FROM `tp_config` [ RunTime:0.001000s ]
+[2020-07-02T11:56:26+08:00][sql] SHOW FULL COLUMNS FROM `tp_brand` [ RunTime:0.001000s ]
+[2020-07-02T11:56:26+08:00][sql] SELECT `id`,`cat_id`,`logo`,`is_hot` FROM `tp_brand` WHERE  ( cat_id > 0 ) [ RunTime:0.001000s ]
+[2020-07-02T11:56:26+08:00][sql] SHOW FULL COLUMNS FROM `tp_mobile_template` [ RunTime:0.002000s ]
+[2020-07-02T11:56:26+08:00][sql] SELECT `template_html`,`block_info` FROM `tp_mobile_template` WHERE  ( is_index=1 ) LIMIT 1 [ RunTime:0.001000s ]
+[2020-07-02T11:56:26+08:00][sql] SHOW FULL COLUMNS FROM `tp_goods` [ RunTime:0.001000s ]
+[2020-07-02T11:56:26+08:00][sql] SELECT * FROM `tp_goods` WHERE  ( is_recommend=1 and is_on_sale=1 ) ORDER BY `sort` DESC LIMIT 6 [ RunTime:0.001000s ]
+[2020-07-02T11:56:26+08:00][sql] SHOW FULL COLUMNS FROM `tp_team_activity` [ RunTime:0.002000s ]
+[2020-07-02T11:56:26+08:00][sql] SELECT * FROM `tp_team_activity` WHERE  `status` = 1  AND `deleted` = 0 LIMIT 6 [ RunTime:0.001000s ]
+[2020-07-02T11:56:26+08:00][sql] SHOW FULL COLUMNS FROM `tp_team_goods_item` [ RunTime:0.002000s ]
+[2020-07-02T11:56:26+08:00][sql] SELECT * FROM `tp_team_goods_item` WHERE  `team_id` IN (1,2,3,4,5) [ RunTime:0.001000s ]
+[2020-07-02T11:56:26+08:00][sql] SELECT `g`.`goods_id`,`g`.`goods_name`,`g`.`shop_price`,`f`.`price`,`s`.`item_id` FROM `tp_goods` `g` LEFT JOIN `tp_flash_sale` `f` ON `g`.`goods_id`=`f`.`goods_id` LEFT JOIN `tp_spec_goods_price` `s` ON `s`.`prom_id`=f.id AND g.goods_id = s.goods_id WHERE  ( start_time >= 1593655200 and end_time <= 1593662400 and f.is_end = 0  and g.is_on_sale = 1 ) LIMIT 3 [ RunTime:0.002000s ]
+[2020-07-02T11:56:26+08:00][sql] SHOW FULL COLUMNS FROM `tp_ad_position` [ RunTime:0.001000s ]
+[2020-07-02T11:56:26+08:00][sql] SELECT `position_id`,`position_id`,`position_name`,`ad_width`,`ad_height` FROM `tp_ad_position` [ RunTime:0.001000s ]
+[2020-07-02T11:56:26+08:00][sql] SHOW FULL COLUMNS FROM `tp_ad` [ RunTime:0.001000s ]
+[2020-07-02T11:56:26+08:00][sql] SELECT * FROM `tp_ad` WHERE  ( pid=9  and enabled = 1 and start_time < 1593658800 and end_time > 1593658800  ) ORDER BY `orderby` DESC LIMIT 5 [ RunTime:0.000000s ]
+[2020-07-02T11:56:26+08:00][sql] SELECT `position_id`,`position_id`,`position_name`,`ad_width`,`ad_height` FROM `tp_ad_position` [ RunTime:0.000000s ]
+[2020-07-02T11:56:26+08:00][sql] SELECT * FROM `tp_ad` WHERE  ( pid=507  and enabled = 1 and start_time < 1593658800 and end_time > 1593658800  ) ORDER BY `orderby` DESC LIMIT 1 [ RunTime:0.001000s ]
+[2020-07-02T11:56:26+08:00][sql] SELECT `position_id`,`position_id`,`position_name`,`ad_width`,`ad_height` FROM `tp_ad_position` [ RunTime:0.001000s ]
+[2020-07-02T11:56:26+08:00][sql] SELECT * FROM `tp_ad` WHERE  ( pid=508  and enabled = 1 and start_time < 1593658800 and end_time > 1593658800  ) ORDER BY `orderby` DESC LIMIT 1 [ RunTime:0.001000s ]
+[2020-07-02T11:56:26+08:00][sql] SELECT `position_id`,`position_id`,`position_name`,`ad_width`,`ad_height` FROM `tp_ad_position` [ RunTime:0.001000s ]
+[2020-07-02T11:56:26+08:00][sql] SELECT * FROM `tp_ad` WHERE  ( pid=509  and enabled = 1 and start_time < 1593658800 and end_time > 1593658800  ) ORDER BY `orderby` DESC LIMIT 1 [ RunTime:0.000000s ]
+[2020-07-02T11:56:26+08:00][sql] SELECT `position_id`,`position_id`,`position_name`,`ad_width`,`ad_height` FROM `tp_ad_position` [ RunTime:0.001000s ]
+[2020-07-02T11:56:26+08:00][sql] SELECT * FROM `tp_ad` WHERE  ( pid=510  and enabled = 1 and start_time < 1593658800 and end_time > 1593658800  ) ORDER BY `orderby` DESC LIMIT 1 [ RunTime:0.000000s ]
+[2020-07-02T11:56:26+08:00][sql] SELECT `position_id`,`position_id`,`position_name`,`ad_width`,`ad_height` FROM `tp_ad_position` [ RunTime:0.000000s ]
+[2020-07-02T11:56:26+08:00][sql] SELECT * FROM `tp_ad` WHERE  ( pid=506  and enabled = 1 and start_time < 1593658800 and end_time > 1593658800  ) ORDER BY `orderby` DESC LIMIT 1 [ RunTime:0.000000s ]
+[2020-07-02T11:56:26+08:00][sql] SELECT `original_img` FROM `tp_goods` WHERE  `goods_id` = 312 LIMIT 1 [ RunTime:0.000000s ]
+[2020-07-02T11:56:26+08:00][sql] SHOW FULL COLUMNS FROM `tp_comment` [ RunTime:0.001000s ]
+[2020-07-02T11:56:26+08:00][sql] SELECT sum(case when img !='' and img not like 'N;%' then 1 else 0 end) as img_sum,sum(case when ceil((deliver_rank+goods_rank+service_rank)/3)= 4 or ceil((deliver_rank+goods_rank+service_rank)/3)= 5 then 1 else 0 end) as high_sum,sum(case when ceil((deliver_rank+goods_rank+service_rank)/3)= 3  then 1 else 0 end) as center_sum,sum(case when ceil((deliver_rank+goods_rank+service_rank)/3)<=2  then 1 else 0 end) as low_sum,count(comment_id) as total_sum FROM `tp_comment` WHERE  `is_show` = 1  AND `goods_id` = 312  AND `username` <> 'admin' GROUP BY `goods_id` LIMIT 1 [ RunTime:0.001000s ]
+[2020-07-02T11:56:26+08:00][sql] SELECT `original_img` FROM `tp_goods` WHERE  `goods_id` = 311 LIMIT 1 [ RunTime:0.000000s ]
+[2020-07-02T11:56:26+08:00][sql] SELECT sum(case when img !='' and img not like 'N;%' then 1 else 0 end) as img_sum,sum(case when ceil((deliver_rank+goods_rank+service_rank)/3)= 4 or ceil((deliver_rank+goods_rank+service_rank)/3)= 5 then 1 else 0 end) as high_sum,sum(case when ceil((deliver_rank+goods_rank+service_rank)/3)= 3  then 1 else 0 end) as center_sum,sum(case when ceil((deliver_rank+goods_rank+service_rank)/3)<=2  then 1 else 0 end) as low_sum,count(comment_id) as total_sum FROM `tp_comment` WHERE  `is_show` = 1  AND `goods_id` = 311  AND `username` <> 'admin' GROUP BY `goods_id` LIMIT 1 [ RunTime:0.000000s ]
+[2020-07-02T11:56:26+08:00][sql] SELECT `original_img` FROM `tp_goods` WHERE  `goods_id` = 310 LIMIT 1 [ RunTime:0.001000s ]
+[2020-07-02T11:56:26+08:00][sql] SELECT sum(case when img !='' and img not like 'N;%' then 1 else 0 end) as img_sum,sum(case when ceil((deliver_rank+goods_rank+service_rank)/3)= 4 or ceil((deliver_rank+goods_rank+service_rank)/3)= 5 then 1 else 0 end) as high_sum,sum(case when ceil((deliver_rank+goods_rank+service_rank)/3)= 3  then 1 else 0 end) as center_sum,sum(case when ceil((deliver_rank+goods_rank+service_rank)/3)<=2  then 1 else 0 end) as low_sum,count(comment_id) as total_sum FROM `tp_comment` WHERE  `is_show` = 1  AND `goods_id` = 310  AND `username` <> 'admin' GROUP BY `goods_id` LIMIT 1 [ RunTime:0.001000s ]
+[2020-07-02T11:56:26+08:00][sql] SELECT `original_img` FROM `tp_goods` WHERE  `goods_id` = 309 LIMIT 1 [ RunTime:0.000000s ]
+[2020-07-02T11:56:26+08:00][sql] SELECT sum(case when img !='' and img not like 'N;%' then 1 else 0 end) as img_sum,sum(case when ceil((deliver_rank+goods_rank+service_rank)/3)= 4 or ceil((deliver_rank+goods_rank+service_rank)/3)= 5 then 1 else 0 end) as high_sum,sum(case when ceil((deliver_rank+goods_rank+service_rank)/3)= 3  then 1 else 0 end) as center_sum,sum(case when ceil((deliver_rank+goods_rank+service_rank)/3)<=2  then 1 else 0 end) as low_sum,count(comment_id) as total_sum FROM `tp_comment` WHERE  `is_show` = 1  AND `goods_id` = 309  AND `username` <> 'admin' GROUP BY `goods_id` LIMIT 1 [ RunTime:0.001000s ]
+[2020-07-02T11:56:26+08:00][sql] SELECT `original_img` FROM `tp_goods` WHERE  `goods_id` = 308 LIMIT 1 [ RunTime:0.000000s ]
+[2020-07-02T11:56:26+08:00][sql] SELECT sum(case when img !='' and img not like 'N;%' then 1 else 0 end) as img_sum,sum(case when ceil((deliver_rank+goods_rank+service_rank)/3)= 4 or ceil((deliver_rank+goods_rank+service_rank)/3)= 5 then 1 else 0 end) as high_sum,sum(case when ceil((deliver_rank+goods_rank+service_rank)/3)= 3  then 1 else 0 end) as center_sum,sum(case when ceil((deliver_rank+goods_rank+service_rank)/3)<=2  then 1 else 0 end) as low_sum,count(comment_id) as total_sum FROM `tp_comment` WHERE  `is_show` = 1  AND `goods_id` = 308  AND `username` <> 'admin' GROUP BY `goods_id` LIMIT 1 [ RunTime:0.000000s ]
+[2020-07-02T11:56:26+08:00][sql] SELECT `original_img` FROM `tp_goods` WHERE  `goods_id` = 307 LIMIT 1 [ RunTime:0.000000s ]
+[2020-07-02T11:56:26+08:00][sql] SELECT sum(case when img !='' and img not like 'N;%' then 1 else 0 end) as img_sum,sum(case when ceil((deliver_rank+goods_rank+service_rank)/3)= 4 or ceil((deliver_rank+goods_rank+service_rank)/3)= 5 then 1 else 0 end) as high_sum,sum(case when ceil((deliver_rank+goods_rank+service_rank)/3)= 3  then 1 else 0 end) as center_sum,sum(case when ceil((deliver_rank+goods_rank+service_rank)/3)<=2  then 1 else 0 end) as low_sum,count(comment_id) as total_sum FROM `tp_comment` WHERE  `is_show` = 1  AND `goods_id` = 307  AND `username` <> 'admin' GROUP BY `goods_id` LIMIT 1 [ RunTime:0.001000s ]
+[2020-07-02T11:56:26+08:00][sql] SELECT `original_img` FROM `tp_goods` WHERE  `goods_id` = 269 LIMIT 1 [ RunTime:0.000000s ]
+[2020-07-02T11:56:26+08:00][sql] SHOW FULL COLUMNS FROM `tp_team_follow` [ RunTime:0.001000s ]
+[2020-07-02T11:56:26+08:00][sql] SELECT `follow_user_head_pic` FROM `tp_team_follow` WHERE  `team_id` = 1 LIMIT 3 [ RunTime:0.000000s ]
+[2020-07-02T11:56:26+08:00][sql] SELECT `follow_user_head_pic` FROM `tp_team_follow` WHERE  `team_id` = 1 LIMIT 3 [ RunTime:0.001000s ]
+[2020-07-02T11:56:26+08:00][sql] SELECT `follow_user_head_pic` FROM `tp_team_follow` WHERE  `team_id` = 1 LIMIT 3 [ RunTime:0.000000s ]
+[2020-07-02T11:56:26+08:00][sql] SELECT `follow_user_head_pic` FROM `tp_team_follow` WHERE  `team_id` = 1 LIMIT 3 [ RunTime:0.001000s ]
+[2020-07-02T11:56:26+08:00][sql] SELECT `follow_user_head_pic` FROM `tp_team_follow` WHERE  `team_id` = 2 LIMIT 3 [ RunTime:0.001000s ]
+[2020-07-02T11:56:26+08:00][sql] SELECT `follow_user_head_pic` FROM `tp_team_follow` WHERE  `team_id` = 2 LIMIT 3 [ RunTime:0.000000s ]
+[2020-07-02T11:56:26+08:00][sql] SELECT `follow_user_head_pic` FROM `tp_team_follow` WHERE  `team_id` = 2 LIMIT 3 [ RunTime:0.001000s ]
+[2020-07-02T11:56:26+08:00][sql] SELECT `follow_user_head_pic` FROM `tp_team_follow` WHERE  `team_id` = 2 LIMIT 3 [ RunTime:0.000000s ]
+[2020-07-02T11:56:26+08:00][sql] SELECT `original_img` FROM `tp_goods` WHERE  `goods_id` = 325 LIMIT 1 [ RunTime:0.000000s ]
+[2020-07-02T11:56:26+08:00][sql] SELECT `follow_user_head_pic` FROM `tp_team_follow` WHERE  `team_id` = 3 LIMIT 3 [ RunTime:0.000000s ]
+[2020-07-02T11:56:26+08:00][sql] SELECT `follow_user_head_pic` FROM `tp_team_follow` WHERE  `team_id` = 3 LIMIT 3 [ RunTime:0.000000s ]
+[2020-07-02T11:56:26+08:00][sql] SELECT `follow_user_head_pic` FROM `tp_team_follow` WHERE  `team_id` = 3 LIMIT 3 [ RunTime:0.000000s ]
+[2020-07-02T11:56:26+08:00][sql] SELECT `original_img` FROM `tp_goods` WHERE  `goods_id` = 319 LIMIT 1 [ RunTime:0.000000s ]
+[2020-07-02T11:56:26+08:00][sql] SELECT `follow_user_head_pic` FROM `tp_team_follow` WHERE  `team_id` = 4 LIMIT 3 [ RunTime:0.001000s ]
+[2020-07-02T11:56:26+08:00][sql] SELECT `follow_user_head_pic` FROM `tp_team_follow` WHERE  `team_id` = 4 LIMIT 3 [ RunTime:0.001000s ]
+[2020-07-02T11:56:26+08:00][sql] SELECT `follow_user_head_pic` FROM `tp_team_follow` WHERE  `team_id` = 4 LIMIT 3 [ RunTime:0.000000s ]
+[2020-07-02T11:56:26+08:00][sql] SELECT `original_img` FROM `tp_goods` WHERE  `goods_id` = 306 LIMIT 1 [ RunTime:0.000000s ]
+[2020-07-02T11:56:26+08:00][sql] SELECT `follow_user_head_pic` FROM `tp_team_follow` WHERE  `team_id` = 5 LIMIT 3 [ RunTime:0.001000s ]
+[2020-07-02T11:56:26+08:00][sql] SELECT `follow_user_head_pic` FROM `tp_team_follow` WHERE  `team_id` = 5 LIMIT 3 [ RunTime:0.001001s ]
+[2020-07-02T11:56:26+08:00][sql] SELECT `follow_user_head_pic` FROM `tp_team_follow` WHERE  `team_id` = 5 LIMIT 3 [ RunTime:0.000000s ]
+[2020-07-02T11:56:26+08:00][sql] SELECT `follow_user_head_pic` FROM `tp_team_follow` WHERE  `team_id` = 5 LIMIT 3 [ RunTime:0.001000s ]
+[2020-07-02T11:56:26+08:00][info] [ VIEW ] ../template/mobile/rainbow/index/index.html [ array (
+  0 => 'action',
+  1 => 'template_now_time',
+  2 => 'from_terminal',
+  3 => 'first_login',
+  4 => 'goods_category_tree',
+  5 => 'brand_list',
+  6 => 'tpshop_config',
+  7 => 'user_id',
+  8 => 'uname',
+  9 => 'team_activity',
+  10 => 'flash_sale_list',
+  11 => 'start_time',
+  12 => 'end_time',
+  13 => 'recommend_goods',
+  14 => 'edit_ad',
+) ]
+[2020-07-02T11:56:26+08:00][sql] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;port=3306;dbname=tpshop6.777777;charset=utf8
+[2020-07-02T11:56:26+08:00][sql] SHOW FULL COLUMNS FROM `tp_goods` [ RunTime:0.001000s ]
+[2020-07-02T11:56:26+08:00][sql] SELECT * FROM `tp_goods` `a` LEFT JOIN `tp_goods_label` `b` ON `a`.`label_id`=`b`.`label_id` WHERE  `a`.`is_hot` = 1  AND `a`.`exchange_integral` = 0  AND `a`.`is_on_sale` = 1 ORDER BY `a`.`sort` DESC LIMIT 0,10 [ RunTime:0.001000s ]
+[2020-07-02T11:56:26+08:00][sql] SHOW FULL COLUMNS FROM `tp_goods_label` [ RunTime:0.001000s ]
+[2020-07-02T11:56:26+08:00][sql] SELECT `label_id`,`label_name` FROM `tp_goods_label` [ RunTime:0.000000s ]
+[2020-07-02T11:56:26+08:00][sql] SELECT `original_img` FROM `tp_goods` WHERE  `goods_id` = 305 LIMIT 1 [ RunTime:0.001000s ]
+[2020-07-02T11:56:26+08:00][sql] SELECT `original_img` FROM `tp_goods` WHERE  `goods_id` = 304 LIMIT 1 [ RunTime:0.000000s ]
+[2020-07-02T11:56:26+08:00][sql] SELECT `original_img` FROM `tp_goods` WHERE  `goods_id` = 303 LIMIT 1 [ RunTime:0.001000s ]
+[2020-07-02T11:56:26+08:00][info] [ VIEW ] ../template/mobile/rainbow/index/ajaxGetMore.html [ array (
+  0 => 'action',
+  1 => 'template_now_time',
+  2 => 'from_terminal',
+  3 => 'first_login',
+  4 => 'goods_category_tree',
+  5 => 'brand_list',
+  6 => 'tpshop_config',
+  7 => 'user_id',
+  8 => 'uname',
+  9 => 'favourite_goods',
+) ]
+[2020-07-02T11:56:32+08:00][sql] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;port=3306;dbname=tpshop6.777777;charset=utf8
+[2020-07-02T11:56:32+08:00][sql] SHOW FULL COLUMNS FROM `tp_config` [ RunTime:0.001000s ]
+[2020-07-02T11:56:32+08:00][sql] SELECT * FROM `tp_config` [ RunTime:0.001000s ]
+[2020-07-02T11:56:32+08:00][sql] SHOW FULL COLUMNS FROM `tp_brand` [ RunTime:0.002001s ]
+[2020-07-02T11:56:32+08:00][sql] SELECT `id`,`cat_id`,`logo`,`is_hot` FROM `tp_brand` WHERE  ( cat_id > 0 ) [ RunTime:0.000000s ]
+[2020-07-02T11:56:32+08:00][sql] SHOW FULL COLUMNS FROM `tp_goods` [ RunTime:0.001000s ]
+[2020-07-02T11:56:32+08:00][sql] SELECT * FROM `tp_goods` `a` LEFT JOIN `tp_goods_label` `b` ON `a`.`label_id`=`b`.`label_id` WHERE  `a`.`is_hot` = 1  AND `a`.`exchange_integral` = 0  AND `a`.`is_on_sale` = 1 ORDER BY `a`.`sort` DESC LIMIT 10,10 [ RunTime:0.002000s ]
+[2020-07-02T11:56:32+08:00][sql] SELECT `original_img` FROM `tp_goods` WHERE  `goods_id` = 302 LIMIT 1 [ RunTime:0.000000s ]
+[2020-07-02T11:56:32+08:00][sql] SELECT `original_img` FROM `tp_goods` WHERE  `goods_id` = 301 LIMIT 1 [ RunTime:0.001000s ]
+[2020-07-02T11:56:32+08:00][sql] SELECT `original_img` FROM `tp_goods` WHERE  `goods_id` = 300 LIMIT 1 [ RunTime:0.000000s ]
+[2020-07-02T11:56:32+08:00][sql] SELECT `original_img` FROM `tp_goods` WHERE  `goods_id` = 299 LIMIT 1 [ RunTime:0.000000s ]
+[2020-07-02T11:56:32+08:00][sql] SELECT `original_img` FROM `tp_goods` WHERE  `goods_id` = 298 LIMIT 1 [ RunTime:0.000000s ]
+[2020-07-02T11:56:32+08:00][sql] SELECT `original_img` FROM `tp_goods` WHERE  `goods_id` = 297 LIMIT 1 [ RunTime:0.001000s ]
+[2020-07-02T11:56:32+08:00][sql] SELECT `original_img` FROM `tp_goods` WHERE  `goods_id` = 296 LIMIT 1 [ RunTime:0.001000s ]
+[2020-07-02T11:56:32+08:00][sql] SELECT `original_img` FROM `tp_goods` WHERE  `goods_id` = 295 LIMIT 1 [ RunTime:0.000000s ]
+[2020-07-02T11:56:32+08:00][sql] SELECT `original_img` FROM `tp_goods` WHERE  `goods_id` = 294 LIMIT 1 [ RunTime:0.000000s ]
+[2020-07-02T11:56:32+08:00][sql] SELECT `original_img` FROM `tp_goods` WHERE  `goods_id` = 293 LIMIT 1 [ RunTime:0.001000s ]
+[2020-07-02T11:56:32+08:00][info] [ VIEW ] ../template/mobile/rainbow/index/ajaxGetMore.html [ array (
+  0 => 'action',
+  1 => 'template_now_time',
+  2 => 'from_terminal',
+  3 => 'first_login',
+  4 => 'goods_category_tree',
+  5 => 'brand_list',
+  6 => 'tpshop_config',
+  7 => 'user_id',
+  8 => 'uname',
+  9 => 'favourite_goods',
+) ]
+[2020-07-02T11:56:33+08:00][sql] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;port=3306;dbname=tpshop6.777777;charset=utf8
+[2020-07-02T11:56:33+08:00][sql] SHOW FULL COLUMNS FROM `tp_goods` [ RunTime:0.001000s ]
+[2020-07-02T11:56:33+08:00][sql] SELECT * FROM `tp_goods` `a` LEFT JOIN `tp_goods_label` `b` ON `a`.`label_id`=`b`.`label_id` WHERE  `a`.`is_hot` = 1  AND `a`.`exchange_integral` = 0  AND `a`.`is_on_sale` = 1 ORDER BY `a`.`sort` DESC LIMIT 20,10 [ RunTime:0.002001s ]
+[2020-07-02T11:56:33+08:00][sql] SELECT `original_img` FROM `tp_goods` WHERE  `goods_id` = 292 LIMIT 1 [ RunTime:0.001000s ]
+[2020-07-02T11:56:33+08:00][sql] SELECT `original_img` FROM `tp_goods` WHERE  `goods_id` = 291 LIMIT 1 [ RunTime:0.001000s ]
+[2020-07-02T11:56:33+08:00][sql] SELECT `original_img` FROM `tp_goods` WHERE  `goods_id` = 290 LIMIT 1 [ RunTime:0.000000s ]
+[2020-07-02T11:56:33+08:00][sql] SELECT `original_img` FROM `tp_goods` WHERE  `goods_id` = 289 LIMIT 1 [ RunTime:0.001000s ]
+[2020-07-02T11:56:33+08:00][sql] SELECT `original_img` FROM `tp_goods` WHERE  `goods_id` = 288 LIMIT 1 [ RunTime:0.001000s ]
+[2020-07-02T11:56:33+08:00][sql] SELECT `original_img` FROM `tp_goods` WHERE  `goods_id` = 287 LIMIT 1 [ RunTime:0.000000s ]
+[2020-07-02T11:56:33+08:00][sql] SELECT `original_img` FROM `tp_goods` WHERE  `goods_id` = 286 LIMIT 1 [ RunTime:0.000000s ]
+[2020-07-02T11:56:33+08:00][sql] SELECT `original_img` FROM `tp_goods` WHERE  `goods_id` = 285 LIMIT 1 [ RunTime:0.001000s ]
+[2020-07-02T11:56:33+08:00][sql] SELECT `original_img` FROM `tp_goods` WHERE  `goods_id` = 284 LIMIT 1 [ RunTime:0.001000s ]
+[2020-07-02T11:56:33+08:00][sql] SELECT `original_img` FROM `tp_goods` WHERE  `goods_id` = 283 LIMIT 1 [ RunTime:0.000000s ]
+[2020-07-02T11:56:33+08:00][info] [ VIEW ] ../template/mobile/rainbow/index/ajaxGetMore.html [ array (
+  0 => 'action',
+  1 => 'template_now_time',
+  2 => 'from_terminal',
+  3 => 'first_login',
+  4 => 'goods_category_tree',
+  5 => 'brand_list',
+  6 => 'tpshop_config',
+  7 => 'user_id',
+  8 => 'uname',
+  9 => 'favourite_goods',
+) ]
+[2020-07-02T12:03:24+08:00][sql] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;port=3306;dbname=tpshop6.066666;charset=utf8
+[2020-07-02T12:03:24+08:00][sql] SHOW FULL COLUMNS FROM `tp_config` [ RunTime:0.001000s ]
+[2020-07-02T12:03:24+08:00][sql] SELECT * FROM `tp_config` [ RunTime:0.001000s ]
+[2020-07-02T12:03:24+08:00][sql] SHOW FULL COLUMNS FROM `tp_brand` [ RunTime:0.002000s ]
+[2020-07-02T12:03:24+08:00][sql] SELECT `id`,`cat_id`,`logo`,`is_hot` FROM `tp_brand` WHERE  ( cat_id > 0 ) [ RunTime:0.000000s ]
+[2020-07-02T12:03:24+08:00][sql] SHOW FULL COLUMNS FROM `tp_mobile_template` [ RunTime:0.002000s ]
+[2020-07-02T12:03:24+08:00][sql] SELECT `template_html`,`block_info` FROM `tp_mobile_template` WHERE  ( is_index=1 ) LIMIT 1 [ RunTime:0.000000s ]
+[2020-07-02T12:03:24+08:00][sql] SHOW FULL COLUMNS FROM `tp_goods` [ RunTime:0.001000s ]
+[2020-07-02T12:03:24+08:00][sql] SELECT * FROM `tp_goods` WHERE  ( is_recommend=1 and is_on_sale=1 ) ORDER BY `sort` DESC LIMIT 6 [ RunTime:0.001000s ]
+[2020-07-02T12:03:24+08:00][sql] SHOW FULL COLUMNS FROM `tp_team_activity` [ RunTime:0.002000s ]
+[2020-07-02T12:03:24+08:00][sql] SELECT * FROM `tp_team_activity` WHERE  `status` = 1  AND `deleted` = 0 LIMIT 6 [ RunTime:0.001000s ]
+[2020-07-02T12:03:24+08:00][sql] SHOW FULL COLUMNS FROM `tp_team_goods_item` [ RunTime:0.001001s ]
+[2020-07-02T12:03:24+08:00][sql] SELECT * FROM `tp_team_goods_item` WHERE  `team_id` IN (1,2,3,4,5) [ RunTime:0.000000s ]
+[2020-07-02T12:03:24+08:00][sql] SELECT `g`.`goods_id`,`g`.`goods_name`,`g`.`shop_price`,`f`.`price`,`s`.`item_id` FROM `tp_goods` `g` LEFT JOIN `tp_flash_sale` `f` ON `g`.`goods_id`=`f`.`goods_id` LEFT JOIN `tp_spec_goods_price` `s` ON `s`.`prom_id`=f.id AND g.goods_id = s.goods_id WHERE  ( start_time >= 1593662400 and end_time <= 1593669600 and f.is_end = 0  and g.is_on_sale = 1 ) LIMIT 3 [ RunTime:0.002000s ]
+[2020-07-02T12:03:24+08:00][sql] SHOW FULL COLUMNS FROM `tp_ad_position` [ RunTime:0.001000s ]
+[2020-07-02T12:03:24+08:00][sql] SELECT `position_id`,`position_id`,`position_name`,`ad_width`,`ad_height` FROM `tp_ad_position` [ RunTime:0.001000s ]
+[2020-07-02T12:03:24+08:00][sql] SHOW FULL COLUMNS FROM `tp_ad` [ RunTime:0.001000s ]
+[2020-07-02T12:03:24+08:00][sql] SELECT * FROM `tp_ad` WHERE  ( pid=9  and enabled = 1 and start_time < 1593658800 and end_time > 1593658800  ) ORDER BY `orderby` DESC LIMIT 5 [ RunTime:0.001000s ]
+[2020-07-02T12:03:24+08:00][sql] SELECT `position_id`,`position_id`,`position_name`,`ad_width`,`ad_height` FROM `tp_ad_position` [ RunTime:0.000000s ]
+[2020-07-02T12:03:24+08:00][sql] SELECT * FROM `tp_ad` WHERE  ( pid=507  and enabled = 1 and start_time < 1593658800 and end_time > 1593658800  ) ORDER BY `orderby` DESC LIMIT 1 [ RunTime:0.001001s ]
+[2020-07-02T12:03:24+08:00][sql] SELECT `position_id`,`position_id`,`position_name`,`ad_width`,`ad_height` FROM `tp_ad_position` [ RunTime:0.001000s ]
+[2020-07-02T12:03:24+08:00][sql] SELECT * FROM `tp_ad` WHERE  ( pid=508  and enabled = 1 and start_time < 1593658800 and end_time > 1593658800  ) ORDER BY `orderby` DESC LIMIT 1 [ RunTime:0.001000s ]
+[2020-07-02T12:03:24+08:00][sql] SELECT `position_id`,`position_id`,`position_name`,`ad_width`,`ad_height` FROM `tp_ad_position` [ RunTime:0.001000s ]
+[2020-07-02T12:03:24+08:00][sql] SELECT * FROM `tp_ad` WHERE  ( pid=509  and enabled = 1 and start_time < 1593658800 and end_time > 1593658800  ) ORDER BY `orderby` DESC LIMIT 1 [ RunTime:0.000000s ]
+[2020-07-02T12:03:24+08:00][sql] SELECT `position_id`,`position_id`,`position_name`,`ad_width`,`ad_height` FROM `tp_ad_position` [ RunTime:0.000000s ]
+[2020-07-02T12:03:24+08:00][sql] SELECT * FROM `tp_ad` WHERE  ( pid=510  and enabled = 1 and start_time < 1593658800 and end_time > 1593658800  ) ORDER BY `orderby` DESC LIMIT 1 [ RunTime:0.000000s ]
+[2020-07-02T12:03:24+08:00][sql] SELECT `position_id`,`position_id`,`position_name`,`ad_width`,`ad_height` FROM `tp_ad_position` [ RunTime:0.000000s ]
+[2020-07-02T12:03:24+08:00][sql] SELECT * FROM `tp_ad` WHERE  ( pid=506  and enabled = 1 and start_time < 1593658800 and end_time > 1593658800  ) ORDER BY `orderby` DESC LIMIT 1 [ RunTime:0.001000s ]
+[2020-07-02T12:03:24+08:00][sql] SHOW FULL COLUMNS FROM `tp_comment` [ RunTime:0.001000s ]
+[2020-07-02T12:03:24+08:00][sql] SELECT sum(case when img !='' and img not like 'N;%' then 1 else 0 end) as img_sum,sum(case when ceil((deliver_rank+goods_rank+service_rank)/3)= 4 or ceil((deliver_rank+goods_rank+service_rank)/3)= 5 then 1 else 0 end) as high_sum,sum(case when ceil((deliver_rank+goods_rank+service_rank)/3)= 3  then 1 else 0 end) as center_sum,sum(case when ceil((deliver_rank+goods_rank+service_rank)/3)<=2  then 1 else 0 end) as low_sum,count(comment_id) as total_sum FROM `tp_comment` WHERE  `is_show` = 1  AND `goods_id` = 312  AND `username` <> 'admin' GROUP BY `goods_id` LIMIT 1 [ RunTime:0.001000s ]
+[2020-07-02T12:03:24+08:00][sql] SELECT sum(case when img !='' and img not like 'N;%' then 1 else 0 end) as img_sum,sum(case when ceil((deliver_rank+goods_rank+service_rank)/3)= 4 or ceil((deliver_rank+goods_rank+service_rank)/3)= 5 then 1 else 0 end) as high_sum,sum(case when ceil((deliver_rank+goods_rank+service_rank)/3)= 3  then 1 else 0 end) as center_sum,sum(case when ceil((deliver_rank+goods_rank+service_rank)/3)<=2  then 1 else 0 end) as low_sum,count(comment_id) as total_sum FROM `tp_comment` WHERE  `is_show` = 1  AND `goods_id` = 311  AND `username` <> 'admin' GROUP BY `goods_id` LIMIT 1 [ RunTime:0.001000s ]
+[2020-07-02T12:03:24+08:00][sql] SELECT sum(case when img !='' and img not like 'N;%' then 1 else 0 end) as img_sum,sum(case when ceil((deliver_rank+goods_rank+service_rank)/3)= 4 or ceil((deliver_rank+goods_rank+service_rank)/3)= 5 then 1 else 0 end) as high_sum,sum(case when ceil((deliver_rank+goods_rank+service_rank)/3)= 3  then 1 else 0 end) as center_sum,sum(case when ceil((deliver_rank+goods_rank+service_rank)/3)<=2  then 1 else 0 end) as low_sum,count(comment_id) as total_sum FROM `tp_comment` WHERE  `is_show` = 1  AND `goods_id` = 310  AND `username` <> 'admin' GROUP BY `goods_id` LIMIT 1 [ RunTime:0.000000s ]
+[2020-07-02T12:03:24+08:00][sql] SELECT sum(case when img !='' and img not like 'N;%' then 1 else 0 end) as img_sum,sum(case when ceil((deliver_rank+goods_rank+service_rank)/3)= 4 or ceil((deliver_rank+goods_rank+service_rank)/3)= 5 then 1 else 0 end) as high_sum,sum(case when ceil((deliver_rank+goods_rank+service_rank)/3)= 3  then 1 else 0 end) as center_sum,sum(case when ceil((deliver_rank+goods_rank+service_rank)/3)<=2  then 1 else 0 end) as low_sum,count(comment_id) as total_sum FROM `tp_comment` WHERE  `is_show` = 1  AND `goods_id` = 309  AND `username` <> 'admin' GROUP BY `goods_id` LIMIT 1 [ RunTime:0.000000s ]
+[2020-07-02T12:03:24+08:00][sql] SELECT sum(case when img !='' and img not like 'N;%' then 1 else 0 end) as img_sum,sum(case when ceil((deliver_rank+goods_rank+service_rank)/3)= 4 or ceil((deliver_rank+goods_rank+service_rank)/3)= 5 then 1 else 0 end) as high_sum,sum(case when ceil((deliver_rank+goods_rank+service_rank)/3)= 3  then 1 else 0 end) as center_sum,sum(case when ceil((deliver_rank+goods_rank+service_rank)/3)<=2  then 1 else 0 end) as low_sum,count(comment_id) as total_sum FROM `tp_comment` WHERE  `is_show` = 1  AND `goods_id` = 308  AND `username` <> 'admin' GROUP BY `goods_id` LIMIT 1 [ RunTime:0.000000s ]
+[2020-07-02T12:03:24+08:00][sql] SELECT sum(case when img !='' and img not like 'N;%' then 1 else 0 end) as img_sum,sum(case when ceil((deliver_rank+goods_rank+service_rank)/3)= 4 or ceil((deliver_rank+goods_rank+service_rank)/3)= 5 then 1 else 0 end) as high_sum,sum(case when ceil((deliver_rank+goods_rank+service_rank)/3)= 3  then 1 else 0 end) as center_sum,sum(case when ceil((deliver_rank+goods_rank+service_rank)/3)<=2  then 1 else 0 end) as low_sum,count(comment_id) as total_sum FROM `tp_comment` WHERE  `is_show` = 1  AND `goods_id` = 307  AND `username` <> 'admin' GROUP BY `goods_id` LIMIT 1 [ RunTime:0.001000s ]
+[2020-07-02T12:03:24+08:00][sql] SHOW FULL COLUMNS FROM `tp_team_follow` [ RunTime:0.002000s ]
+[2020-07-02T12:03:24+08:00][sql] SELECT `follow_user_head_pic` FROM `tp_team_follow` WHERE  `team_id` = 1 LIMIT 3 [ RunTime:0.000000s ]
+[2020-07-02T12:03:24+08:00][sql] SELECT `follow_user_head_pic` FROM `tp_team_follow` WHERE  `team_id` = 1 LIMIT 3 [ RunTime:0.000000s ]
+[2020-07-02T12:03:24+08:00][sql] SELECT `follow_user_head_pic` FROM `tp_team_follow` WHERE  `team_id` = 1 LIMIT 3 [ RunTime:0.000000s ]
+[2020-07-02T12:03:24+08:00][sql] SELECT `follow_user_head_pic` FROM `tp_team_follow` WHERE  `team_id` = 1 LIMIT 3 [ RunTime:0.000000s ]
+[2020-07-02T12:03:24+08:00][sql] SELECT `follow_user_head_pic` FROM `tp_team_follow` WHERE  `team_id` = 2 LIMIT 3 [ RunTime:0.000000s ]
+[2020-07-02T12:03:24+08:00][sql] SELECT `follow_user_head_pic` FROM `tp_team_follow` WHERE  `team_id` = 2 LIMIT 3 [ RunTime:0.000000s ]
+[2020-07-02T12:03:24+08:00][sql] SELECT `follow_user_head_pic` FROM `tp_team_follow` WHERE  `team_id` = 2 LIMIT 3 [ RunTime:0.001000s ]
+[2020-07-02T12:03:24+08:00][sql] SELECT `follow_user_head_pic` FROM `tp_team_follow` WHERE  `team_id` = 2 LIMIT 3 [ RunTime:0.000000s ]
+[2020-07-02T12:03:24+08:00][sql] SELECT `original_img` FROM `tp_goods` WHERE  `goods_id` = 325 LIMIT 1 [ RunTime:0.000000s ]
+[2020-07-02T12:03:24+08:00][sql] SELECT `follow_user_head_pic` FROM `tp_team_follow` WHERE  `team_id` = 3 LIMIT 3 [ RunTime:0.001000s ]
+[2020-07-02T12:03:24+08:00][sql] SELECT `follow_user_head_pic` FROM `tp_team_follow` WHERE  `team_id` = 3 LIMIT 3 [ RunTime:0.000000s ]
+[2020-07-02T12:03:24+08:00][sql] SELECT `follow_user_head_pic` FROM `tp_team_follow` WHERE  `team_id` = 3 LIMIT 3 [ RunTime:0.001000s ]
+[2020-07-02T12:03:24+08:00][sql] SELECT `follow_user_head_pic` FROM `tp_team_follow` WHERE  `team_id` = 4 LIMIT 3 [ RunTime:0.000000s ]
+[2020-07-02T12:03:24+08:00][sql] SELECT `follow_user_head_pic` FROM `tp_team_follow` WHERE  `team_id` = 4 LIMIT 3 [ RunTime:0.001000s ]
+[2020-07-02T12:03:24+08:00][sql] SELECT `follow_user_head_pic` FROM `tp_team_follow` WHERE  `team_id` = 4 LIMIT 3 [ RunTime:0.000000s ]
+[2020-07-02T12:03:24+08:00][sql] SELECT `follow_user_head_pic` FROM `tp_team_follow` WHERE  `team_id` = 5 LIMIT 3 [ RunTime:0.000000s ]
+[2020-07-02T12:03:24+08:00][sql] SELECT `follow_user_head_pic` FROM `tp_team_follow` WHERE  `team_id` = 5 LIMIT 3 [ RunTime:0.001000s ]
+[2020-07-02T12:03:24+08:00][sql] SELECT `follow_user_head_pic` FROM `tp_team_follow` WHERE  `team_id` = 5 LIMIT 3 [ RunTime:0.000000s ]
+[2020-07-02T12:03:24+08:00][sql] SELECT `follow_user_head_pic` FROM `tp_team_follow` WHERE  `team_id` = 5 LIMIT 3 [ RunTime:0.001000s ]
+[2020-07-02T12:03:24+08:00][info] [ VIEW ] ../template/mobile/rainbow/index/index.html [ array (
+  0 => 'action',
+  1 => 'template_now_time',
+  2 => 'from_terminal',
+  3 => 'first_login',
+  4 => 'goods_category_tree',
+  5 => 'brand_list',
+  6 => 'tpshop_config',
+  7 => 'user_id',
+  8 => 'uname',
+  9 => 'team_activity',
+  10 => 'flash_sale_list',
+  11 => 'start_time',
+  12 => 'end_time',
+  13 => 'recommend_goods',
+  14 => 'edit_ad',
+) ]
+[2020-07-02T12:03:24+08:00][sql] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;port=3306;dbname=tpshop6.066666;charset=utf8
+[2020-07-02T12:03:24+08:00][sql] SHOW FULL COLUMNS FROM `tp_goods` [ RunTime:0.001000s ]
+[2020-07-02T12:03:24+08:00][sql] SELECT * FROM `tp_goods` `a` LEFT JOIN `tp_goods_label` `b` ON `a`.`label_id`=`b`.`label_id` WHERE  `a`.`is_hot` = 1  AND `a`.`exchange_integral` = 0  AND `a`.`is_on_sale` = 1 ORDER BY `a`.`sort` DESC LIMIT 0,10 [ RunTime:0.002000s ]
+[2020-07-02T12:03:24+08:00][sql] SHOW FULL COLUMNS FROM `tp_goods_label` [ RunTime:0.001000s ]
+[2020-07-02T12:03:24+08:00][sql] SELECT `label_id`,`label_name` FROM `tp_goods_label` [ RunTime:0.000000s ]
+[2020-07-02T12:03:24+08:00][info] [ VIEW ] ../template/mobile/rainbow/index/ajaxGetMore.html [ array (
+  0 => 'action',
+  1 => 'template_now_time',
+  2 => 'from_terminal',
+  3 => 'first_login',
+  4 => 'goods_category_tree',
+  5 => 'brand_list',
+  6 => 'tpshop_config',
+  7 => 'user_id',
+  8 => 'uname',
+  9 => 'favourite_goods',
+) ]
+[2020-07-02T12:03:28+08:00][info] [ VIEW ] ../template/mobile/rainbow/user/login.html [ array (
+  0 => 'action',
+  1 => 'template_now_time',
+  2 => 'from_terminal',
+  3 => 'first_login',
+  4 => 'goods_category_tree',
+  5 => 'brand_list',
+  6 => 'tpshop_config',
+  7 => 'user_id',
+  8 => 'uname',
+  9 => 'order_status_coment',
+  10 => 'alipay_url',
+) ]
+[2020-07-02T12:03:28+08:00][sql] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;port=3306;dbname=tpshop6.066666;charset=utf8
+[2020-07-02T12:03:28+08:00][sql] select * from tp_plugin where type='login' AND status = 1 [ RunTime:0.001000s ]
