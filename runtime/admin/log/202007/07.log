@@ -1,0 +1,128 @@
+[2020-07-07T21:30:32+08:00][sql] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;port=3306;dbname=tpshop6.03334;charset=utf8
+[2020-07-07T21:30:32+08:00][sql] SHOW FULL COLUMNS FROM `tp_config` [ RunTime:0.002000s ]
+[2020-07-07T21:30:32+08:00][sql] SELECT * FROM `tp_config` [ RunTime:0.001000s ]
+[2020-07-07T21:30:32+08:00][info] [ VIEW ] C:\Users\admin\Desktop\TPshop20200701_tp6\app\admin\view\admin/login.html [ array (
+  0 => 'action',
+  1 => 'template_now_time',
+  2 => 'upgradeMsg',
+  3 => 'navigate_admin',
+  4 => 'start_time',
+  5 => 'end_time',
+  6 => 'tpshop_config',
+) ]
+[2020-07-07T21:30:45+08:00][sql] CONNECT:[ UseTime:0.003000s ] mysql:host=127.0.0.1;port=3306;dbname=tpshop6.03334;charset=utf8
+[2020-07-07T21:30:45+08:00][sql] SHOW FULL COLUMNS FROM `tp_admin` [ RunTime:0.004001s ]
+[2020-07-07T21:30:45+08:00][sql] SELECT * FROM `tp_admin` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.002000s ]
+[2020-07-07T21:30:45+08:00][sql] SHOW FULL COLUMNS FROM `tp_order` [ RunTime:0.003000s ]
+[2020-07-07T21:30:45+08:00][sql] SELECT COUNT(*) AS think_count FROM `tp_order` WHERE  ( order_status=0 and (pay_status=1 or pay_code='cod') ) [ RunTime:0.006000s ]
+[2020-07-07T21:30:45+08:00][info] [ VIEW ] C:\Users\admin\Desktop\TPshop20200701_tp6\app\admin\view\index/index.html [ array (
+  0 => 'action',
+  1 => 'template_now_time',
+  2 => 'upgradeMsg',
+  3 => 'navigate_admin',
+  4 => 'start_time',
+  5 => 'end_time',
+  6 => 'tpshop_config',
+  7 => 'order_amount',
+  8 => 'admin_info',
+  9 => 'menu',
+) ]
+[2020-07-07T21:30:46+08:00][sql] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;port=3306;dbname=tpshop6.03334;charset=utf8
+[2020-07-07T21:30:46+08:00][sql] SELECT VERSION() as version [ RunTime:0.001000s ]
+[2020-07-07T21:30:46+08:00][sql] SHOW FULL COLUMNS FROM `tp_order` [ RunTime:0.003001s ]
+[2020-07-07T21:30:46+08:00][sql] SELECT COUNT(*) AS think_count FROM `tp_order` WHERE  ( order_status=0 and (pay_status=1 or pay_code='cod') ) [ RunTime:0.002000s ]
+[2020-07-07T21:30:46+08:00][sql] SELECT COUNT(*) AS think_count FROM `tp_order` WHERE  ( add_time >= 1594051200 ) [ RunTime:0.001000s ]
+[2020-07-07T21:30:46+08:00][sql] SHOW FULL COLUMNS FROM `tp_goods` [ RunTime:0.002000s ]
+[2020-07-07T21:30:46+08:00][sql] SELECT COUNT(*) AS think_count FROM `tp_goods` WHERE  ( 1=1 ) [ RunTime:0.001000s ]
+[2020-07-07T21:30:46+08:00][sql] SHOW FULL COLUMNS FROM `tp_article` [ RunTime:0.005000s ]
+[2020-07-07T21:30:46+08:00][sql] SELECT COUNT(*) AS think_count FROM `tp_article` WHERE  ( 1=1 ) [ RunTime:0.001000s ]
+[2020-07-07T21:30:46+08:00][sql] SHOW FULL COLUMNS FROM `tp_users` [ RunTime:0.004000s ]
+[2020-07-07T21:30:46+08:00][sql] SELECT COUNT(*) AS think_count FROM `tp_users` WHERE  ( 1=1 ) [ RunTime:0.002001s ]
+[2020-07-07T21:30:46+08:00][sql] SELECT COUNT(*) AS think_count FROM `tp_users` WHERE  ( last_login >= 1594051200 ) [ RunTime:0.002000s ]
+[2020-07-07T21:30:46+08:00][sql] SELECT COUNT(*) AS think_count FROM `tp_users` WHERE  ( reg_time >= 1594051200 ) [ RunTime:0.002000s ]
+[2020-07-07T21:30:46+08:00][sql] SHOW FULL COLUMNS FROM `tp_comment` [ RunTime:0.002000s ]
+[2020-07-07T21:30:46+08:00][sql] SELECT COUNT(*) AS think_count FROM `tp_comment` WHERE  ( is_show=0 ) [ RunTime:0.001000s ]
+[2020-07-07T21:30:46+08:00][sql] SHOW FULL COLUMNS FROM `tp_spec_goods_price` [ RunTime:0.002000s ]
+[2020-07-07T21:30:46+08:00][sql] SELECT COUNT(*) AS think_count FROM `tp_spec_goods_price` WHERE  ( store_count < 10 ) [ RunTime:0.001000s ]
+[2020-07-07T21:30:46+08:00][info] [ VIEW ] C:\Users\admin\Desktop\TPshop20200701_tp6\app\admin\view\index/welcome.html [ array (
+  0 => 'action',
+  1 => 'template_now_time',
+  2 => 'upgradeMsg',
+  3 => 'navigate_admin',
+  4 => 'start_time',
+  5 => 'end_time',
+  6 => 'tpshop_config',
+  7 => 'sys_info',
+  8 => 'is_saas',
+  9 => 'count',
+) ]
+[2020-07-07T21:30:46+08:00][sql] CONNECT:[ UseTime:0.011001s ] mysql:host=127.0.0.1;port=3306;dbname=tpshop6.03334;charset=utf8
+[2020-07-07T21:30:46+08:00][sql] SHOW FULL COLUMNS FROM `tp_cart` [ RunTime:0.004000s ]
+[2020-07-07T21:30:46+08:00][sql] DELETE FROM `tp_cart` WHERE  ( user_id = 0 and  add_time < 1594125046 ) [ RunTime:0.001000s ]
+[2020-07-07T21:30:46+08:00][sql] DELETE FROM `tp_cart` WHERE  ( add_time < 1591536646 ) [ RunTime:0.001000s ]
+[2020-07-07T21:30:46+08:00][sql] SHOW FULL COLUMNS FROM `tp_sms_log` [ RunTime:0.003000s ]
+[2020-07-07T21:30:46+08:00][sql] DELETE FROM `tp_sms_log` WHERE  ( add_time < 1591536646 ) [ RunTime:0.001000s ]
+[2020-07-07T21:30:46+08:00][sql] SHOW FULL COLUMNS FROM `tp_order` [ RunTime:0.002001s ]
+[2020-07-07T21:30:46+08:00][sql] SELECT `order_id` FROM `tp_order` WHERE  ( order_status = 1 and shipping_status = 1 and shipping_time < 1594042246 and pay_status = 1 ) LIMIT 10 [ RunTime:0.001000s ]
+[2020-07-07T21:30:48+08:00][sql] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;port=3306;dbname=tpshop6.03334;charset=utf8
+[2020-07-07T21:30:48+08:00][sql] SHOW FULL COLUMNS FROM `tp_config` [ RunTime:0.003000s ]
+[2020-07-07T21:30:48+08:00][sql] SELECT * FROM `tp_config` [ RunTime:0.001000s ]
+[2020-07-07T21:30:48+08:00][sql] SHOW FULL COLUMNS FROM `tp_template_class` [ RunTime:0.003001s ]
+[2020-07-07T21:30:48+08:00][sql] SELECT * FROM `tp_template_class` WHERE  ( parent_id=0 ) ORDER BY `sort_order` ASC [ RunTime:0.000000s ]
+[2020-07-07T21:30:48+08:00][sql] SHOW FULL COLUMNS FROM `tp_mobile_template` [ RunTime:0.004000s ]
+[2020-07-07T21:30:48+08:00][sql] SELECT * FROM `tp_mobile_template` WHERE  ( type=1 ) [ RunTime:0.002000s ]
+[2020-07-07T21:30:48+08:00][info] [ VIEW ] C:\Users\admin\Desktop\TPshop20200701_tp6\app\admin\view\block/templateList.html [ array (
+  0 => 'action',
+  1 => 'template_now_time',
+  2 => 'upgradeMsg',
+  3 => 'navigate_admin',
+  4 => 'start_time',
+  5 => 'end_time',
+  6 => 'tpshop_config',
+  7 => 'p_id',
+  8 => 'templates',
+  9 => 'is_saas',
+) ]
+[2020-07-07T21:30:50+08:00][sql] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=tpshop6.03334;charset=utf8
+[2020-07-07T21:30:50+08:00][sql] SHOW FULL COLUMNS FROM `tp_config` [ RunTime:0.002000s ]
+[2020-07-07T21:30:50+08:00][sql] SELECT * FROM `tp_config` [ RunTime:0.001000s ]
+[2020-07-07T21:30:50+08:00][sql] SHOW FULL COLUMNS FROM `tp_brand` [ RunTime:0.002000s ]
+[2020-07-07T21:30:50+08:00][sql] SELECT * FROM `tp_brand` [ RunTime:0.001000s ]
+[2020-07-07T21:30:50+08:00][sql] SELECT `id`,`cat_id` FROM `tp_brand` WHERE  ( name in (select `name` from `tp_brand` group by name having COUNT(id) > 1) ) [ RunTime:0.001000s ]
+[2020-07-07T21:30:50+08:00][sql] SHOW FULL COLUMNS FROM `tp_goods_category` [ RunTime:0.002000s ]
+[2020-07-07T21:30:50+08:00][sql] SELECT `id`,`name` FROM `tp_goods_category` WHERE  ( level = 1 ) [ RunTime:0.000000s ]
+[2020-07-07T21:30:50+08:00][sql] SHOW FULL COLUMNS FROM `tp_suppliers` [ RunTime:0.002000s ]
+[2020-07-07T21:30:50+08:00][sql] SELECT `suppliers_id`,`suppliers_name` FROM `tp_suppliers` [ RunTime:0.001000s ]
+[2020-07-07T21:30:50+08:00][info] [ VIEW ] C:\Users\admin\Desktop\TPshop20200701_tp6\app\admin\view\goods/goodsList.html [ array (
+  0 => 'action',
+  1 => 'template_now_time',
+  2 => 'upgradeMsg',
+  3 => 'navigate_admin',
+  4 => 'start_time',
+  5 => 'end_time',
+  6 => 'tpshop_config',
+  7 => 'categoryList',
+  8 => 'brandList',
+  9 => 'supplier_list',
+) ]
+[2020-07-07T21:30:51+08:00][sql] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;port=3306;dbname=tpshop6.03334;charset=utf8
+[2020-07-07T21:30:51+08:00][sql] SHOW FULL COLUMNS FROM `tp_goods` [ RunTime:0.003000s ]
+[2020-07-07T21:30:51+08:00][sql] SELECT COUNT(*) AS think_count FROM `tp_goods` WHERE  (  1 = 1  and audit = 0 ) [ RunTime:0.001000s ]
+[2020-07-07T21:30:51+08:00][sql] SELECT * FROM `tp_goods` WHERE  (  1 = 1  and audit = 0 ) ORDER BY `goods_id` DESC LIMIT 0,20 [ RunTime:0.002000s ]
+[2020-07-07T21:30:51+08:00][sql] SHOW FULL COLUMNS FROM `tp_suppliers` [ RunTime:0.002000s ]
+[2020-07-07T21:30:51+08:00][sql] SELECT `suppliers_id`,`suppliers_name` FROM `tp_suppliers` [ RunTime:0.001001s ]
+[2020-07-07T21:30:51+08:00][sql] SHOW FULL COLUMNS FROM `tp_goods_category` [ RunTime:0.001000s ]
+[2020-07-07T21:30:51+08:00][sql] SELECT * FROM `tp_goods_category` [ RunTime:0.002000s ]
+[2020-07-07T21:30:51+08:00][info] [ VIEW ] C:\Users\admin\Desktop\TPshop20200701_tp6\app\admin\view\goods/ajaxGoodsList.html [ array (
+  0 => 'action',
+  1 => 'template_now_time',
+  2 => 'upgradeMsg',
+  3 => 'navigate_admin',
+  4 => 'start_time',
+  5 => 'end_time',
+  6 => 'tpshop_config',
+  7 => 'supplier_list',
+  8 => 'catList',
+  9 => 'goodsList',
+  10 => 'page',
+) ]
